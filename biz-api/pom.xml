@@ -14,6 +14,13 @@
 
     <dependencies>
 
+        <!-- Bean Validation -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+
+
         <!-- spring webmvc -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -33,12 +40,6 @@
             <artifactId>dubbo-common</artifactId>
             <version>${dubbo.version}</version>
             <optional>true</optional>
-        </dependency>
-
-        <!-- Bean Validation -->
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
         </dependency>
 
     </dependencies>

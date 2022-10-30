@@ -1,6 +1,7 @@
 package cn.tryboom.biz.api.interfaces;
 
 import cn.tryboom.biz.api.model.User;
+import cn.tryboom.biz.api.openfeign.UserServiceFeignClientConfiguration;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since 0.0.1
  */
 
-@FeignClient("${user-service.name}")
+@FeignClient(name = "user-service", configuration = UserServiceFeignClientConfiguration.class)
 @RequestMapping("/user")
 @DubboService
 public interface UserService {
