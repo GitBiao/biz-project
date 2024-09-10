@@ -2,7 +2,7 @@ package cn.tryboom.biz.web.mvc.controller;
 
 import cn.tryboom.biz.api.ApiResponse;
 import cn.tryboom.biz.api.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author biao
- * @since
+ * @since 2024-09
  */
 @RestController
 @RequestMapping("/echo")
@@ -18,7 +18,7 @@ public class EchoController {
 
     @Value("${server.port:8080}")
     private Integer port;
-    @Autowired
+    @Resource
     private RestTemplate restTemplate;
 
     @PostMapping("/user")
