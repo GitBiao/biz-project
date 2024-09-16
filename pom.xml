@@ -37,6 +37,7 @@
         <module>biz-dependencies</module>
         <module>biz-client</module>
         <module>biz-register-eureka-server</module>
+        <module>biz-user-service</module>
     </modules>
 
     <dependencyManagement>

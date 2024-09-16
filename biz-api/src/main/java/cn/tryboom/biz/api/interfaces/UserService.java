@@ -5,6 +5,7 @@ import cn.tryboom.biz.api.openfeign.UserServiceFeignClientConfiguration;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * 用户服务接口
@@ -17,6 +18,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 public interface UserService {
 
     @PostMapping("/save")
-    Boolean saveUser(User user);
+    Boolean saveUser(@RequestBody User user);
 
 }

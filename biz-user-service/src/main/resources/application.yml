@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: user-service
+
+server:
+  port: 1201
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1101.com:1101/eureka/,http://eureka1102.com:1102/eureka/,http://eureka1103.com:1103/eureka/
